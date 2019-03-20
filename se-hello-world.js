@@ -6,8 +6,13 @@ import {
 
 class SEHelloWorld extends LitElement {
   render() {
-    html`
-      <div>Hello Schneider Electric</div>
+    return html`
+      <style>
+        p {
+          color: orange;
+        }
+      </style>
+      <p>Hello Schneider Electric</p>
     `;
   }
 }
