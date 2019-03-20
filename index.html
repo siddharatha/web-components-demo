@@ -7,6 +7,7 @@
       import "./my-element.js";
       import "https://unpkg.com/wired-elements@0.9.0-1/dist/wired-elements.bundled.js";
       import "https://unpkg.com/@polymer/paper-button@3.0.1/paper-button.js?module";
+      import "https://unpkg.com/@polymer/paper-spinner@3.0.1/paper-spinner.js?module";
       import "./se-hello-world.js";
       import "./simple-rest-api-element.js";
       import "./simple-graphql-element.js";
@@ -22,14 +23,16 @@
         <p>Outside Web Component</p>
         <wired-input placeholder="Enter name"></wired-input>
         <paper-button raised class="indigo">Click Me</paper-button>
+        <paper-spinner active></paper-spinner>
       </wired-card>
       <br />
-      <wired-card elevation="5">
+      <wired-card elevation="5" style="height:300px">
         <simple-rest-api-element></simple-rest-api-element>
       </wired-card>
       <br />
-      <wired-card>
+      <wired-card elevation="4">
         <simple-graphql-element
+          style="height:300px"
           query='query {
             product(name:"BK500-RS",language:"en",country:"US"){
               name

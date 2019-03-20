@@ -25,10 +25,10 @@ class SimpleRestAPIElement extends LitElement {
 
   constructor() {
     super();
-    this.productname = "bk500";
+    this.productname = "PostAPI";
     this.productInfo = {
-      name: "bk500",
-      description: "hello there bk500"
+      name: "PostAPI",
+      description: "hello there PostAPI"
     };
     this.posts = [];
     this.launchInfo = {};
@@ -41,7 +41,6 @@ class SimpleRestAPIElement extends LitElement {
     return html`
       <p>Lets call Some REST APIs</p>
       <h1>${this.productname}</h1>
-      <p>${this.productInfo.description}</p>
 
       <wired-listbox>
         ${this.posts.map(
@@ -54,8 +53,7 @@ class SimpleRestAPIElement extends LitElement {
               />
             `
         )}
-        <wired-listbox></wired-listbox
-      ></wired-listbox>
+      </wired-listbox>
     `;
   }
 }
