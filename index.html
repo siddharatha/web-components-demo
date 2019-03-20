@@ -9,6 +9,7 @@
       import "https://unpkg.com/@polymer/paper-button@3.0.1/paper-button.js?module";
       import "./se-hello-world.js";
       import "./simple-rest-api-element.js";
+      import "./simple-graphql-element.js";
     </script>
   </head>
 
@@ -22,6 +23,19 @@
     <br />
     <wired-card elevation="5">
       <simple-rest-api-element></simple-rest-api-element>
+    </wired-card>
+    <br />
+    <wired-card>
+      <simple-graphql-element
+        query='query {
+            product(name:"BK500-RS",language:"en",country:"US"){
+              name
+              description
+              imageId
+            }
+          }'
+      >
+      </simple-graphql-element>
     </wired-card>
   </body>
 </html>
