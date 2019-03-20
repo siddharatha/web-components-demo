@@ -3,7 +3,6 @@ import {
   html,
   css
 } from "https://unpkg.com/lit-element@2.0.0-rc.5?module";
-
 class SimpleGraphQLElement extends LitElement {
   static get properties() {
     return {

@@ -14,28 +14,32 @@
   </head>
 
   <body>
-    <wired-card elevation="2">
-      <se-hello-world></se-hello-world>
-      <p>Outside Web Component</p>
-      <wired-input placeholder="Enter name"></wired-input>
-      <paper-button raised class="indigo">Click Me</paper-button>
-    </wired-card>
-    <br />
-    <wired-card elevation="5">
-      <simple-rest-api-element></simple-rest-api-element>
-    </wired-card>
-    <br />
-    <wired-card>
-      <simple-graphql-element
-        query='query {
+    <div
+      style="display:flex;align-items: center;height: 500px;justify-content: space-around;"
+    >
+      <wired-card elevation="2">
+        <se-hello-world></se-hello-world>
+        <p>Outside Web Component</p>
+        <wired-input placeholder="Enter name"></wired-input>
+        <paper-button raised class="indigo">Click Me</paper-button>
+      </wired-card>
+      <br />
+      <wired-card elevation="5">
+        <simple-rest-api-element></simple-rest-api-element>
+      </wired-card>
+      <br />
+      <wired-card>
+        <simple-graphql-element
+          query='query {
             product(name:"BK500-RS",language:"en",country:"US"){
               name
               description
               imageId
             }
           }'
-      >
-      </simple-graphql-element>
-    </wired-card>
+        >
+        </simple-graphql-element>
+      </wired-card>
+    </div>
   </body>
 </html>
