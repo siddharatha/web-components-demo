@@ -11,14 +11,17 @@
       import "./se-hello-world.js";
       import "./simple-rest-api-element.js";
       import "./simple-graphql-element.js";
+      import "./salesforce-connect.js";
+      import "./se-product-display.js";
+      import "./se-business-display.js";
     </script>
   </head>
 
   <body>
     <div
-      style="display:flex;align-items: center;height: 500px;justify-content: space-around;"
+      style="display:flex;align-items:flex-start;justify-content: start;flex-wrap:wrap"
     >
-      <wired-card elevation="2">
+      <!-- <wired-card elevation="2">
         <se-hello-world></se-hello-world>
         <p>Outside Web Component</p>
         <wired-input placeholder="Enter name"></wired-input>
@@ -43,6 +46,66 @@
         >
         </simple-graphql-element>
       </wired-card>
+      <wired-card elevation="4">
+        <simple-graphql-element
+          style="height:300px"
+          query="query {
+              me{
+                Id
+                Email
+                Username
+              }
+              }"
+        >
+        </simple-graphql-element>
+      </wired-card>
+      <wired-card elevation="4">
+        <simple-graphql-element
+          style="height:300px;width:300px"
+          query="query {
+            business{
+              name
+              imageUrl
+            }
+                  }"
+        >
+        </simple-graphql-element>
+      </wired-card>
+      <wired-card elevation="4">
+        <simple-graphql-element
+          style="height:300px;width:300px"
+          query="query {
+                      me{
+                        Id
+                        Email
+                        Username
+                      }
+                      }"
+        >
+        </simple-graphql-element>
+      </wired-card>
+      <wired-card elevation="4">
+        <simple-graphql-element
+          style="height:600px;width:400px"
+          query="query {
+                        cases{
+                            CaseNumber
+                            Subject
+                            Description
+                            CustomerRequest__c
+                           } 
+                          }"
+        >
+        </simple-graphql-element>
+      </wired-card> -->
+      <se-business-display></se-business-display>
+      <!-- <se-product-display productname="BK500-RS"></se-product-display> -->
     </div>
   </body>
+  <script>
+    const businessdisplay = document.querySelector("se-business-display");
+    businessdisplay.addEventListener("selectionChange", e =>
+      console.log(e.detail)
+    );
+  </script>
 </html>

@@ -12,6 +12,7 @@ class SEHelloWorld extends LitElement {
       }
       p {
         color: orange;
+        background-color: red;
       }
     `;
   }

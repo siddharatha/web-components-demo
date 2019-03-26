@@ -64,3 +64,7 @@ Lets create our own element and see how it can be used within this app
 ```
 
 # Schneider Hello World
+
+# Rest API
+
+# GraphQL Element

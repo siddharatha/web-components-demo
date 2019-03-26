@@ -1,0 +1,15 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "4 key features , Custom Elements, Shadow Dom, HTML imports, CSS",
+  "main": "my-element.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material/mwc-icon": "^0.3.6"
+  }
+}
