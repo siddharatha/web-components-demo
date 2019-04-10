@@ -6,7 +6,7 @@ import {
 
 class SEHelloWorld extends LitElement {
   static get styles() {
-    return css`
+    return css `
       :host {
         display: block;
       }
@@ -18,8 +18,9 @@ class SEHelloWorld extends LitElement {
   }
 
   render() {
-    return html`
+    return html `
       <p>Hello Schneider Electric</p>
+      <div>Hello there</div>
     `;
   }
 }

@@ -2,9 +2,9 @@ import {
   LitElement,
   html,
   css
-} from "https://unpkg.com/lit-element@2.0.0-rc.5?module";
-import "https://unpkg.com/wired-elements@0.9.0-1/dist/wired-elements.bundled.js";
-import "https://unpkg.com/@material/mwc-ripple@^0.1.0/mwc-ripple.js?module";
+} from 'https://unpkg.com/lit-element@2.0.0-rc.5?module';
+import 'https://unpkg.com/wired-elements@0.9.0-1/dist/wired-elements.bundled.js';
+import 'https://unpkg.com/@material/mwc-ripple@^0.1.0/mwc-ripple.js?module';
 
 class SECategoryDisplay extends LitElement {
   static get properties() {
@@ -18,9 +18,9 @@ class SECategoryDisplay extends LitElement {
   updated(changedProperties) {
     if (this.results && this.results.length === 0) {
       const options = {
-        method: "post",
+        method: 'post',
         headers: {
-          "Content-Type": "application/json"
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           query: `query{
@@ -33,7 +33,7 @@ class SECategoryDisplay extends LitElement {
           }`
         })
       };
-      fetch(`http://localhost:4000/graphql`, options)
+      fetch(`https://sleepy-refuge-69790.herokuapp.com/`, options)
         .then(res => res.json())
         .then(({ data }) => {
           this.results = data;
@@ -86,9 +86,9 @@ class SECategoryDisplay extends LitElement {
 
   selected(evt) {
     this.dispatchEvent(
-      new CustomEvent("selectionChange", { detail: evt.target.dataset.id })
+      new CustomEvent('selectionChange', { detail: evt.target.dataset.id })
     );
   }
 }
 
-customElements.define("se-category-display", SECategoryDisplay);
+customElements.define('se-category-display', SECategoryDisplay);
