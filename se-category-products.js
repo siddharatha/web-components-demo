@@ -152,7 +152,7 @@ class SECategoryProducts extends LitElement {
   }
 
   render() {
-    return html`
+    return html`    
       <div class="all-products-grid__subcontainer">
         <ul
           class="all-products-slider all-products-slider--tiny js-slider-lines"
