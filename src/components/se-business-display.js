@@ -59,6 +59,7 @@ class SEBusinessDisplay extends LitElement {
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
       }
       .business-lines__title {
         max-height: 45px;
@@ -68,11 +69,11 @@ class SEBusinessDisplay extends LitElement {
         font-weight: 400;
       }
       .business-lines__row {
+        flex-wrap:wrap;
         flex: 0 1 100%;
         display: flex;
         justify-content: center;
-        max-width: 100vw;
-        height: 95px;
+        max-width: 100vw;        
         background-color: #fff;
         border: 1px solid #e7e6e6;
         border-right: none;
